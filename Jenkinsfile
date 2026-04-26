@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     environment {
         NEXUS_URL = 'http://host.docker.internal:8081'
         NEXUS_REPOSITORY = 'maven-releases'
